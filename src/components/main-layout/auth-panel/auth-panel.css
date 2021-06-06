@@ -78,3 +78,24 @@
   margin-right: 3em;
   margin-left: 3em;
 }
+
+.all-forms {
+  width: 80%;
+}
+
+.wrapper {
+  text-align: right;
+}
+.btn-submit {
+  margin-top: 17px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-top {
+  overflow: hidden;
+  padding: 25px 25px 15px 0px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  margin-bottom: 50px;
+}

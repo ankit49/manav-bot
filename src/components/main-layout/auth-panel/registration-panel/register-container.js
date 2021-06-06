@@ -31,17 +31,6 @@ class RegisterContainer extends React.Component {
                 id="register-email"
                 required
               />
-              <div id="email-fail">Check your Email format</div>
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                name="register-username"
-                placeholder="Username..."
-                className="form-control"
-                id="register-username"
-                required
-              />
             </div>
             <div className="form-group">
               <input
@@ -52,17 +41,6 @@ class RegisterContainer extends React.Component {
                 id="register-password"
                 required
               />
-            </div>
-            <div className="form-group">
-              <input
-                type="password"
-                name="register-repassword"
-                placeholder="ReEnter Password..."
-                className="form-control"
-                id="register-repassword"
-                required
-              />
-              <div id="pass-fail">Passwords doesn't match</div>
             </div>
             <div className="wrapper">
               <button type="submit" className="btn btn-primary btn-submit">
