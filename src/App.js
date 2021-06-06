@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import { Provider } from "react-redux";
+import { store } from "./store";
+import MainContainer from "./components/main-layout/main-layout";
+import HomeContainer from "./components/home-container/home-container";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <div>
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/" component={MainContainer} />
+              <Route exact path="/home" component={HomeContainer} />
+            </Switch>
+          </BrowserRouter>
+        </div>
+      </Provider>
+    );
+  }
 }
 
 export default App;

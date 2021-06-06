@@ -1,0 +1,11 @@
+.intro-content {
+  padding-top: 120px;
+  color: #fff;
+}
+
+.description {
+  margin: 20px 0 10px 0;
+}
+.description p {
+  opacity: 0.7;
+}
