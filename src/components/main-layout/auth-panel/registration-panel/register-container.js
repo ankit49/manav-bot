@@ -42,7 +42,7 @@ class RegisterContainer extends React.Component {
                 required
               />
             </div>
-            <div className="wrapper">
+            <div className="btn-wrapper">
               <button type="submit" className="btn btn-primary btn-submit">
                 Let Me EnTer!
               </button>

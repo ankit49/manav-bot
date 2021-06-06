@@ -1,12 +1,12 @@
 import React from "react";
-
+import BotContainer from "../bot-layout/bot";
 import "./home-container.css";
 
 class HomeContainer extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hi I am home Page</h1>
+        <BotContainer />
       </div>
     );
   }
