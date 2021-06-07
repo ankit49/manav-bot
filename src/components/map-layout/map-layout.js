@@ -8,7 +8,7 @@ import ReactMapboxGl, {
 import * as MapboxGL from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./map-layout.css";
-import logo from "../../helpers/marker.jpeg";
+import logo from "../../helpers/marker.png";
 
 let coordinatesData = [
   [-4.1628252, 50.3695931],
