@@ -1,11 +1,13 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
 import "./login-container.css";
 
 class LoginContainer extends React.Component {
-  validateLogin = () => {
-    console.log("Hi I got clicked");
-  };
+  submitForm(e) {
+    e.preventDefault();
+    this.props.history.push("/home");
+  }
 
   render() {
     return (
@@ -15,7 +17,7 @@ class LoginContainer extends React.Component {
           <p>Enter Your Credentials to Login:</p>
         </div>
         <div className="form-bottom">
-          <form action="#" method="post" onSubmit={this.validateLogin}>
+          <form onSubmit={this.submitForm.bind(this)}>
             <div className="form-group">
               <input
                 type="text"
@@ -37,7 +39,7 @@ class LoginContainer extends React.Component {
               />
             </div>
             <div className="btn-wrapper">
-              <button type="submit" className="btn btn-primary btn-submit">
+              <button className="btn btn-primary btn-submit">
                 Let Me EnTer!
               </button>
             </div>
@@ -48,4 +50,4 @@ class LoginContainer extends React.Component {
   }
 }
 
-export default LoginContainer;
+export default withRouter(LoginContainer);
