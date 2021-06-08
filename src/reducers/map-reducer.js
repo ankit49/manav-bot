@@ -4,6 +4,7 @@ const initialState = {
   coordinatesData: [],
   markerCoordinates: [],
   centerCoordinates: [],
+  poshMarker: [],
 };
 
 export const mapReducer = (state = initialState, action) => {
@@ -16,6 +17,7 @@ export const mapReducer = (state = initialState, action) => {
         coordinatesData: action.coordinatesData,
         markerCoordinates: action.markerCoordinates,
         centerCoordinates: action.centerCoordinates,
+        poshMarker: action.poshMarker,
       };
     default:
       return state;

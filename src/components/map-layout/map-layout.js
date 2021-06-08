@@ -6,6 +6,8 @@ import * as MapboxGL from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./map-layout.css";
 import logo from "../../helpers/marker.png";
+import logo2 from "../../helpers/marker-red.png";
+import logo3 from "../../helpers/marker-moving.png";
 
 const Map = ReactMapboxGl({
   accessToken:
@@ -40,13 +42,21 @@ class MapContainer extends React.Component {
         style={"mapbox://styles/mapbox/streets-v11"}
         center={this.props.map.centerCoordinates}
         container="map"
-        zoom={[15]}
+        zoom={[13]}
         containerStyle={{
           height: "100vh",
           width: "100vw",
         }}
       >
         <GeoJSONLayer data={this.getGeoJsonData()} linePaint={linePaint} />
+
+        {this.props.map.poshMarker.map((coordinate) => {
+          return (
+            <Marker coordinates={coordinate} anchor="bottom">
+              <img src={logo2} />
+            </Marker>
+          );
+        })}
         {this.props.map.markerCoordinates.map((coordinate) => {
           return (
             <Marker coordinates={coordinate} anchor="bottom">

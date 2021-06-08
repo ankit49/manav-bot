@@ -8,11 +8,13 @@ export default {
   updateCoordinates: (
     coordinatesData,
     markerCoordinates,
-    centerCoordinates
+    centerCoordinates,
+    poshMarker
   ) => ({
     type: UPDATE_COORDINATES,
     coordinatesData: coordinatesData,
     markerCoordinates: markerCoordinates,
     centerCoordinates: centerCoordinates,
+    poshMarker: poshMarker,
   }),
 };
